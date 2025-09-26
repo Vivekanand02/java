@@ -1,0 +1,8 @@
+127.0.0.1 - - [08/Apr/2025:00:30:13 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [08/Apr/2025:00:30:14 +0530] "GET /EmployeeManagementSystem/ HTTP/1.1" 200 4094
+0:0:0:0:0:0:0:1 - - [08/Apr/2025:00:30:21 +0530] "GET /EmployeeManagementSystem/employees.jsp HTTP/1.1" 200 8171
+0:0:0:0:0:0:0:1 - - [08/Apr/2025:00:30:30 +0530] "GET /EmployeeManagementSystem/addEmployee.jsp HTTP/1.1" 200 3925
+0:0:0:0:0:0:0:1 - - [08/Apr/2025:00:30:33 +0530] "GET /EmployeeManagementSystem/departments.jsp HTTP/1.1" 200 6740
+0:0:0:0:0:0:0:1 - - [08/Apr/2025:00:30:38 +0530] "GET /EmployeeManagementSystem/settings.jsp HTTP/1.1" 200 3256
+0:0:0:0:0:0:0:1 - - [08/Apr/2025:00:30:47 +0530] "GET /EmployeeManagementSystem/logout.jsp HTTP/1.1" 200 1694
+0:0:0:0:0:0:0:1 - - [08/Apr/2025:00:31:15 +0530] "GET /EmployeeManagementSystem/logout.jsp HTTP/1.1" 200 1694

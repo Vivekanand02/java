@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;MyWeatherApp/src/main/webapp/images/img1.jpg&apos; to &apos;img1.png&apos;" description="Rename resource &apos;img1.jpg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/images/img1.jpg" name="img1.png" stamp="1745260527265" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;MyWeatherApp/src/main/webapp/images/img2.png&apos; to &apos;img2.jpg&apos;" description="Rename resource &apos;img2.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/images/img2.png" name="img2.jpg" stamp="1745260774666" updateReferences="true"/>
+</session>

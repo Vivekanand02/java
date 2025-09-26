@@ -1,0 +1,47 @@
+package com.ems.util;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/addEmployee")
+public class AddEmployeeServlet extends HttpServlet {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String department = request.getParameter("department");
+		String joinDate = request.getParameter("joinDate");
+
+		try (Connection con = DBConnection.getConnection();
+				PreparedStatement ps = con.prepareStatement(
+						"INSERT INTO employees (name, email, department, joining_date) VALUES (?, ?, ?, ?)")) {
+
+			ps.setString(1, name);
+			ps.setString(2, email);
+			ps.setString(3, department);
+			ps.setString(4, joinDate);
+
+			int rowsInserted = ps.executeUpdate();
+
+			if (rowsInserted > 0) {
+				request.getSession().setAttribute("success", "Employee added successfully!");
+				response.sendRedirect("employees.jsp"); // ✅ only one redirect
+			} else {
+				request.getSession().setAttribute("error", "Failed to add employee.");
+				response.sendRedirect("addEmployee.jsp");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.getSession().setAttribute("error", "Error: " + e.getMessage());
+			response.sendRedirect("addEmployee.jsp");
+		}
+	}
+}
